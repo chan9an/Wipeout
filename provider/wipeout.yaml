@@ -1,0 +1,20 @@
+identity:
+  author: chan9an
+  name: wipeout
+  label:
+    en_US: Wipeout (Background Remover)
+    zh_Hans: 背景移除（Wipeout）
+    pt_BR: Wipeout (Removedor de fundo)
+  description:
+    en_US: An AI-powered background remover that extracts the subject and makes the background transparent.
+    zh_Hans: 一款AI驱动的背景移除工具，可将背景抠出并使其透明。
+    pt_BR: Uma ferramenta de remoção de fundo com IA que extrai o sujeito e remove o fundo.
+
+  icon: icon.svg
+
+tools:
+  - tools/wipeout.yaml
+
+extra:
+  python:
+    source: provider/wipeout.py

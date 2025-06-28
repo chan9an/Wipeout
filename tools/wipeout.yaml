@@ -1,0 +1,47 @@
+identity:
+  author: chan9an
+  name: wipeout
+  label:
+    en_US: Wipeout (Background Remover)
+    zh_Hans: 背景移除（Wipeout）
+    pt_BR: Wipeout (Removedor de fundo)
+description:
+  human:
+    en_US: An AI-powered background remover that extracts the subject and makes the background transparent.
+    zh_Hans: 一款AI驱动的背景移除工具，可将背景抠出并使其透明。
+    pt_BR: Uma ferramenta de remoção de fundo com IA que extrai o sujeito e remove o fundo.
+  llm: AI tool for removing image backgrounds and returning transparent images.
+
+parameters:
+  - name: input_image
+    type: files
+    required: true
+    label:
+      en_US: Image file
+      zh_Hans: 图片文件
+      pt_BR: Arquivo de imagem
+    human_description:
+      en_US: The image you want to remove the background from.
+      zh_Hans: 您要去除背景的图片。
+      pt_BR: A imagem da qual deseja remover o fundo.
+    llm_description: The image to process with background removal.
+    form: llm
+
+  - name: host_url
+    type: string
+    required: false     # <-- usually not needed unless your code uses it
+    default: http://localhost:8000
+    label:
+      en_US: Host URL
+      zh_Hans: Dify 地址
+      pt_BR: Host URL
+    human_description:
+      en_US: The base host URL where your images are served.
+      zh_Hans: 您图片文件的主机地址。
+      pt_BR: O URL do host onde suas imagens são servidas.
+    llm_description: The host URL for the image tool.
+    form: form
+
+extra:
+  python:
+    source: tools/wipeout.py
